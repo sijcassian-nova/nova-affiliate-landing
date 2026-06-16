@@ -34,7 +34,7 @@
   .lead{color:var(--nova-text-secondary);max-width:680px;margin:14px auto 0;font-size:17px}
 
   nav{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;max-width:1080px;margin:0 auto}
-  .logo{font-family:'DM Sans';font-weight:700;font-size:20px;letter-spacing:.5px}
+  .logo{display:inline-flex;align-items:center;gap:9px;background:var(--nova-bg-secondary);border:1px solid var(--nova-border);padding:8px 14px;border-radius:12px;text-decoration:none;color:var(--nova-text-primary);font-family:'DM Sans';font-weight:700;font-size:17px;letter-spacing:1.5px}
   .logo b{color:var(--nova-accent)}
   .btn{display:inline-block;background:var(--nova-accent);color:#04211f;font-family:'DM Sans';font-weight:600;
     padding:13px 24px;border-radius:10px;text-decoration:none;border:none;cursor:pointer;font-size:15px;transition:transform .15s, box-shadow .15s}
@@ -42,18 +42,18 @@
   .btn.ghost{background:transparent;color:var(--nova-text-primary);border:1px solid var(--nova-border)}
 
   /* hero */
-  .hero{padding-top:36px;padding-bottom:64px}
+  .hero{padding-top:36px;padding-bottom:64px;text-align:center}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
   .hero h1{font-size:clamp(36px,5vw,58px)}
   .hero h1 span{display:block}
-  .hero-copy p{font-size:clamp(16px,2vw,20px);color:var(--nova-text-secondary);margin:20px 0 0;max-width:520px}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+  .hero p{font-size:clamp(16px,2vw,20px);color:var(--nova-text-secondary);margin:20px auto 0;max-width:600px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:30px}
   .hero-stats{display:flex;gap:40px;flex-wrap:wrap;justify-content:center;margin-top:48px;padding-top:32px;border-top:1px solid var(--nova-border)}
   .hero-stats .n{font-family:'DM Sans';font-weight:700;font-size:26px;color:var(--nova-accent)}
   .hero-stats .l{font-size:13px;color:var(--nova-text-secondary)}
 
   /* calculator card (in hero) */
-  .calc{background:var(--nova-bg-secondary);border:1px solid var(--nova-border);border-radius:18px;padding:26px}
+  .calc{background:var(--nova-bg-secondary);border:1px solid var(--nova-border);border-radius:18px;padding:26px;max-width:560px;margin:0 auto;text-align:left}
   .calc-h{font-family:'DM Sans';font-weight:600;font-size:14px;color:var(--nova-text-secondary);text-transform:uppercase;letter-spacing:1px}
   .calc .rval{font-family:'DM Sans';font-weight:700;font-size:42px;color:var(--nova-accent);margin:2px 0}
   .calc .rsub{font-size:13px;color:var(--nova-text-secondary);margin-bottom:18px}
@@ -126,35 +126,18 @@
 <body>
 
 <nav>
-  <div class="logo">Nova<b>Recruiter</b></div>
+  <a class="logo" href="#" aria-label="Nova Recruiter"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 4 L29 28 H3 Z" fill="#0EB0A4"></path><path d="M16 14 L22.5 28 H9.5 Z" fill="#131C24"></path></svg><span>NOVA</span></a>
   <a class="btn" href="#calculator">See what you'd earn</a>
 </nav>
 
 <header class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <h1><span>Refer Nova Recruiter.</span><span>Get paid. Use it free.</span></h1>
-      <p>You already know recruiters and companies who hire. Turn that network into income — and get our AI sourcing platform free for your own work.</p>
-      <div class="hero-cta">
-        <a class="btn" href="#how">How it works</a>
-        <a class="btn ghost" href="#rewards">What you earn</a>
-      </div>
-    </div>
-    <div class="calc" id="calculator">
-      <div class="calc-h">Your monthly earnings</div>
-      <div class="rval" id="total">€780</div>
-      <div class="rsub" id="breakdown">€150 Starter · €300 Growth · €2,400 Enterprise</div>
-      <label>Starter clients / month: <span class="v" id="starterVal">5</span></label>
-      <input type="range" id="starter" min="0" max="20" value="5" />
-      <label>Growth clients / month: <span class="v" id="growthVal">3</span></label>
-      <input type="range" id="growth" min="0" max="20" value="3" />
-      <label>Enterprise deals / month: <span class="v" id="entVal">1</span></label>
-      <input type="range" id="ent" min="0" max="5" value="1" />
-      <label>Avg Enterprise deal (annual): <span class="v" id="sizeVal">€12,000</span></label>
-      <input type="range" id="size" min="5000" max="50000" step="1000" value="12000" />
-    </div>
-  </div>
   <div class="wrap">
+    <h1><span>Refer Nova Recruiter.</span><span>Get paid. Use it free.</span></h1>
+    <p>You already know recruiters and companies who hire. Turn that network into income — and get our AI sourcing platform free for your own work.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#calculator">See what you'd earn</a>
+      <a class="btn ghost" href="#how">How it works</a>
+    </div>
     <div class="hero-stats">
       <div><div class="n">€30–€100</div><div class="l">per paying client</div></div>
       <div><div class="n">20%</div><div class="l">of Enterprise deals</div></div>
@@ -163,6 +146,25 @@
     </div>
   </div>
 </header>
+
+<section class="wrap" id="calculator">
+  <div class="kicker">Earnings calculator</div>
+  <h2>See what you'd earn</h2>
+  <p class="lead">Drag the sliders — there's no cap.</p>
+  <div class="calc">
+    <div class="calc-h">Your monthly earnings</div>
+    <div class="rval" id="total">€780</div>
+    <div class="rsub" id="breakdown">€150 Starter · €300 Growth · €2,400 Enterprise</div>
+    <label>Starter clients / month: <span class="v" id="starterVal">5</span></label>
+    <input type="range" id="starter" min="0" max="20" value="5" />
+    <label>Growth clients / month: <span class="v" id="growthVal">3</span></label>
+    <input type="range" id="growth" min="0" max="20" value="3" />
+    <label>Enterprise deals / month: <span class="v" id="entVal">1</span></label>
+    <input type="range" id="ent" min="0" max="5" value="1" />
+    <label>Avg Enterprise deal (annual): <span class="v" id="sizeVal">€12,000</span></label>
+    <input type="range" id="size" min="5000" max="50000" step="1000" value="12000" />
+  </div>
+</section>
 
 <section class="wrap" id="what">
   <div class="kicker">The product you'll recommend</div>

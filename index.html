@@ -86,8 +86,10 @@
   .quote{background:var(--nova-bg-secondary);border:1px solid var(--nova-border);border-radius:16px;padding:24px;text-align:left}
   .quote p{font-size:15px;margin-bottom:14px}
   .quote .who{font-size:13px;color:var(--nova-text-secondary)}
-  .logos{display:flex;gap:40px;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:40px;opacity:.8}
-  .logos span{font-family:'DM Sans';font-weight:700;font-size:20px;color:var(--nova-text-secondary)}
+  .logos{display:flex;gap:44px;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:48px}
+  .logos img{height:26px;width:auto;opacity:.72;transition:opacity .15s}
+  .logos img.logo-icon{height:40px}
+  .logos img:hover{opacity:1}
 
   /* timeline */
   .timeline{margin:40px auto 0;max-width:760px;text-align:left}
@@ -127,7 +129,6 @@
 
 <nav>
   <a class="logo" href="#" aria-label="Nova Recruiter"><svg viewBox="0 0 369 112" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M195.098 55.9614C195.098 38.5557 206.473 26.3186 222.863 26.3186C239.242 26.3186 250.706 38.5557 250.706 55.9614C250.706 73.3672 239.175 85.5932 222.786 85.5932C206.396 85.5932 195.098 73.3672 195.098 55.9614ZM205.612 55.9614C205.612 68.2206 212.349 75.9516 222.863 75.9516C233.366 75.9516 240.114 68.2316 240.114 55.9614C240.114 43.6912 233.377 35.9603 222.863 35.9603C212.349 35.9603 205.612 43.7023 205.612 55.9614ZM139.191 27.3346L166.084 67.9554V27.3346H175.968V84.6544H166.084L139.114 44.0446V84.6544H129.229V27.3346H139.191ZM291.868 60.3459C290.763 63.2506 289.593 66.7847 288.179 71.7988C286.92 67.1713 285.826 63.8028 284.567 60.3459L272.021 27.3346H261.363L282.999 84.6544H293.348L314.685 27.3346H304.248L291.868 60.3459ZM337.955 27.3346H348.237L368.934 84.6544H358.342L353.715 71.4013H332.311L327.684 84.6544H317.258L337.955 27.3346ZM341.809 44.4422L335.304 62.9524H350.866L344.239 44.4422C343.742 43 343.351 41.5235 343.068 40.0245C342.737 41.5208 342.317 42.996 341.809 44.4422Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M77.1001 43.1279C50.9362 47.5456 27.7543 63.0076 12.977 85.0961C7.32076 93.2795 2.94484 102.277 0 111.779C17.5714 35.9381 50.3729 0 50.3729 0C50.3729 0 63.2064 14.0594 77.1001 43.1279ZM80.8441 52.7587L81.4626 52.6814C89.6966 71.823 96.1587 91.679 100.768 112C100.768 112 79.3421 90.486 54.0065 85.262C51.6085 84.7762 49.1374 84.7762 46.7394 85.262C21.8787 90.3866 0.795188 111.172 0 111.967C8.92534 94.6077 21.9701 79.701 37.9923 68.552C45.8549 63.227 54.4688 59.1062 63.5488 56.326C68.0653 54.969 72.6708 53.9283 77.332 53.2115C77.6848 53.1649 78.0366 53.1153 78.3883 53.0658C79.2036 52.9508 80.0185 52.8359 80.8441 52.7587Z" fill="#0EB0A4"></path></svg></a>
-  <a class="btn" href="#calculator">See what you'd earn</a>
 </nav>
 
 <header class="hero">
@@ -135,10 +136,6 @@
     <div class="hero-copy">
       <h1><span>Refer Nova Recruiter.</span><span>Get paid. Use it free.</span></h1>
       <p>You already know recruiters and companies who hire. Turn that network into income — and get our AI sourcing platform free for your own work.</p>
-      <div class="hero-cta">
-        <a class="btn" href="#how">How it works</a>
-        <a class="btn ghost" href="#rewards">What you earn</a>
-      </div>
     </div>
     <div class="calc" id="calculator">
       <div class="calc-h">Your monthly earnings</div>
@@ -175,28 +172,6 @@
   </div>
 </section>
 
-<section class="wrap" id="why">
-  <div class="kicker">Why join</div>
-  <h2>Two ways you win</h2>
-  <p class="lead">Two upsides for you — zero cost, zero time commitment.</p>
-  <div class="grid2">
-    <div class="card"><div class="ic">💸</div><h3>1 · Earn cash</h3><p>A one-off payment for every company you refer that becomes a <strong>paying client</strong> — €30 Starter, €100 Growth — plus <strong>20% of every Enterprise deal</strong> you close.</p></div>
-    <div class="card"><div class="ic">🎁</div><h3>2 · Use it free</h3><p>A <strong>free Starter plan</strong> for your own sourcing, yours as long as you bring at least one paying client a month. No fixed hours, no cost.</p></div>
-  </div>
-</section>
-
-<section class="wrap" id="rewards">
-  <div class="kicker">The rewards</div>
-  <h2>What you earn</h2>
-  <p class="lead">Your referrals get <strong>30% off their first 3 months</strong> — a real reason to say yes. You get paid the first week of each month for whatever converted the month before.</p>
-  <div class="rewards">
-    <div class="rewardrow"><div><div class="t">Starter client</div><div class="s">They become a paying Starter client using your code</div></div><div class="v">€30</div></div>
-    <div class="rewardrow"><div><div class="t">Growth client</div><div class="s">They become a paying Growth client using your code</div></div><div class="v">€100</div></div>
-    <div class="rewardrow"><div><div class="t">Enterprise deal</div><div class="s">You lead the deal end-to-end, with Nova's support</div></div><div class="v">20% of annual</div></div>
-    <div class="rewardrow"><div><div class="t">Free Starter plan for you</div><div class="s">Yours while you bring ≥1 paying client a month</div></div><div class="v">Free</div></div>
-  </div>
-</section>
-
 <section class="wrap" id="proof">
   <div class="kicker">Why they'll say yes</div>
   <h2>A product that sells itself</h2>
@@ -211,7 +186,26 @@
     <div class="quote"><p>"We saved over 20 hours of work compared to LinkedIn Recruiter Lite."</p><div class="who">Ignacio Zaera · Simpling</div></div>
     <div class="quote"><p>"Every step is clear, nothing slips, and we've cut our time-to-hire in half."</p><div class="who">Alessandra Cestaro · Holifya</div></div>
   </div>
-  <div class="logos"><span>L'Oréal</span><span>Fever</span><span>Indra</span><span>BCG</span><span>Leroy Merlin</span><span>El Corte Inglés</span><span>Scalapay</span></div>
+  <div class="logos">
+    <img src="assets/loreal.svg" alt="L'Oréal" />
+    <img src="assets/fever.svg" alt="Fever" />
+    <img src="assets/indra.svg" alt="Indra" />
+    <img src="assets/bcg.svg" alt="BCG" />
+    <img class="logo-icon" src="assets/leroymerlin.svg" alt="Leroy Merlin" />
+    <img src="assets/scalapay.svg" alt="Scalapay" />
+  </div>
+</section>
+
+<section class="wrap" id="rewards">
+  <div class="kicker">What's in it for you</div>
+  <h2>What you earn</h2>
+  <p class="lead">Two upsides, zero cost: <strong>cash for every paying client</strong> you bring, and a <strong>free Starter plan</strong> for your own sourcing. Your referrals get <strong>30% off their first 3 months</strong>, and you're paid the first week of each month for whatever converted the month before.</p>
+  <div class="rewards">
+    <div class="rewardrow"><div><div class="t">Starter client</div><div class="s">They become a paying Starter client using your code</div></div><div class="v">€30</div></div>
+    <div class="rewardrow"><div><div class="t">Growth client</div><div class="s">They become a paying Growth client using your code</div></div><div class="v">€100</div></div>
+    <div class="rewardrow"><div><div class="t">Enterprise deal</div><div class="s">You lead the deal end-to-end, with Nova's support</div></div><div class="v">20% of annual</div></div>
+    <div class="rewardrow"><div><div class="t">Free Starter plan for you</div><div class="s">Yours while you bring ≥1 paying client a month</div></div><div class="v">Free</div></div>
+  </div>
 </section>
 
 <section class="wrap" id="how">
